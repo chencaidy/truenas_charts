@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/test/syncthing/1.2.3",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/test/syncthing/1.2.3",
+        "last_update": "2024-04-22 09:13:44",
         "required_features": [
             "normalize/ixVolume",
             "definitions/certificate",
@@ -1071,8 +1071,8 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/test/syncthing/1.1.5",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/test/syncthing/1.1.5",
+        "last_update": "2024-01-03 08:02:28",
         "required_features": [
             "normalize/ixVolume",
             "definitions/certificate",

@@ -3,7 +3,7 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/paperless-ngx/1.2.45",
+        "location": "/workspace/community/paperless-ngx/1.2.45",
         "last_update": "2024-07-23 05:47:21",
         "required_features": [
             "normalize/ixVolume",

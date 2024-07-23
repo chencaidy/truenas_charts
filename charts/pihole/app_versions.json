@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/pihole/2.0.13",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/pihole/2.0.13",
+        "last_update": "2024-07-08 12:48:14",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl",
@@ -1499,8 +1499,8 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/pihole/1.0.25",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/pihole/1.0.25",
+        "last_update": "2024-02-12 11:09:38",
         "required_features": [
             "normalize/ixVolume",
             "definitions/timezone"

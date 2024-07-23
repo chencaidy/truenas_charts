@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/sonarr/1.2.18",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/sonarr/1.2.18",
+        "last_update": "2024-07-17 14:11:03",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl"

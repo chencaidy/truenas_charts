@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/odoo/2.0.8",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/odoo/2.0.8",
+        "last_update": "2024-02-23 09:53:28",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl"
@@ -1995,8 +1995,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/odoo/1.1.1",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/odoo/1.1.1",
+        "last_update": "2023-11-26 09:29:22",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl"

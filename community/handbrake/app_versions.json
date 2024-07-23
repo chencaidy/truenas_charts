@@ -3,11 +3,11 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/handbrake/1.0.3",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/handbrake/1.0.3",
+        "last_update": "2024-05-03 09:14:20",
         "required_features": [
-            "definitions/gpuConfiguration",
             "normalize/ixVolume",
+            "definitions/gpuConfiguration",
             "normalize/acl",
             "definitions/timezone"
         ],

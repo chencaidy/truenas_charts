@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/diskoverdata/2.0.3",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/diskoverdata/2.0.3",
+        "last_update": "2024-06-26 14:46:50",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl",
@@ -1834,8 +1834,8 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/diskoverdata/1.0.15",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/diskoverdata/1.0.15",
+        "last_update": "2024-03-01 12:45:47",
         "required_features": [
             "normalize/ixVolume",
             "definitions/timezone"

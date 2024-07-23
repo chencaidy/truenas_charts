@@ -3,11 +3,11 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/frigate/1.2.6",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/frigate/1.2.6",
+        "last_update": "2024-02-19 12:32:16",
         "required_features": [
-            "definitions/gpuConfiguration",
             "normalize/ixVolume",
+            "definitions/gpuConfiguration",
             "normalize/acl"
         ],
         "human_version": "0.13.2_1.2.6",

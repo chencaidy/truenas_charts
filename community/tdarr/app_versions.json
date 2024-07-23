@@ -3,11 +3,11 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/tdarr/1.2.8",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/tdarr/1.2.8",
+        "last_update": "2024-07-17 14:11:03",
         "required_features": [
-            "definitions/gpuConfiguration",
             "normalize/ixVolume",
+            "definitions/gpuConfiguration",
             "normalize/acl",
             "definitions/timezone"
         ],

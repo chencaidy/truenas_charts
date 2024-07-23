@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/home-assistant/2.0.35",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/home-assistant/2.0.35",
+        "last_update": "2024-07-22 08:11:10",
         "required_features": [
             "normalize/ixVolume",
             "normalize/acl",
@@ -2100,8 +2100,8 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/home-assistant/1.0.130",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/home-assistant/1.0.130",
+        "last_update": "2024-01-19 12:10:17",
         "required_features": [
             "normalize/ixVolume",
             "definitions/timezone"

@@ -3,11 +3,11 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/immich/4.0.8",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/immich/4.0.8",
+        "last_update": "2024-07-19 08:43:04",
         "required_features": [
-            "definitions/gpuConfiguration",
             "normalize/ixVolume",
+            "definitions/gpuConfiguration",
             "normalize/acl",
             "definitions/timezone"
         ],

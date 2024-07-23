@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/__w/charts/charts/charts/elastic-search/1.1.22",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/charts/elastic-search/1.1.22",
+        "last_update": "2024-07-12 13:40:14",
         "required_features": [
             "normalize/ixVolume",
             "definitions/certificate",

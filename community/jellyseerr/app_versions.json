@@ -3,8 +3,8 @@
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/__w/charts/charts/community/jellyseerr/1.0.24",
-        "last_update": "2024-07-23 05:46:04",
+        "location": "/workspace/community/jellyseerr/1.0.24",
+        "last_update": "2024-06-14 10:57:17",
         "required_features": [
             "normalize/ixVolume",
             "definitions/timezone"
