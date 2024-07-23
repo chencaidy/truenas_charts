@@ -8,7 +8,7 @@ workload:
     primary: true
     type: Deployment
     podSpec:
-      hostNetwork: false
+      hostNetwork: {{ .Values.npmNetwork.hostNetwork }}
       securityContext:
         fsGroup: {{ .Values.npmID.group }}
       containers:
@@ -21,6 +21,10 @@ workload:
             runAsGroup: 0
             readOnlyRootFilesystem: false
             runAsNonRoot: false
+            {{- if .Values.npmNetwork.hostNetwork }}
+            privileged: true
+            allowPrivilegeEscalation: true
+            {{- end }}
             capabilities:
               add:
                 # Needed for: s6-applyuidgid: fatal: unable to setuid: Operation not permitted

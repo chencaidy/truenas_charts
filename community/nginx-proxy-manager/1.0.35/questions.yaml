@@ -88,13 +88,20 @@ questions:
     schema:
       type: dict
       attrs:
+        - variable: hostNetwork
+          label: Host Network
+          description: Bind to the host network. While it's recommended to keep this disabled.
+          schema:
+            type: boolean
+            default: false
         - variable: webPort
           label: Web Port
           description: The port for the Nginx Proxy Manager Web UI.
           schema:
             type: int
             default: 30020
-            min: 80
+            show_if: [["hostNetwork", "=", false]]
+            min: 9000
             max: 65535
             required: true
         - variable: httpPort
@@ -103,7 +110,8 @@ questions:
           schema:
             type: int
             default: 30021
-            min: 80
+            show_if: [["hostNetwork", "=", false]]
+            min: 9000
             max: 65535
             required: true
         - variable: httpsPort
@@ -112,7 +120,8 @@ questions:
           schema:
             type: int
             default: 30022
-            min: 443
+            show_if: [["hostNetwork", "=", false]]
+            min: 9000
             max: 65535
             required: true
 

@@ -12,6 +12,7 @@ npmNetwork:
   webPort: 30020
   httpPort: 30021
   httpsPort: 30022
+  hostNetwork: false
 npmID:
   user: 568
   group: 568
