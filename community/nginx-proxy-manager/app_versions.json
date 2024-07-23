@@ -1,16 +1,16 @@
 {
-    "1.0.34": {
+    "1.0.35": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/workspace/community/nginx-proxy-manager/1.0.34",
-        "last_update": "2024-07-23 18:08:31",
+        "location": "/workspace/community/nginx-proxy-manager/1.0.35",
+        "last_update": "2024-07-23 20:17:13",
         "required_features": [
             "normalize/ixVolume",
             "definitions/timezone"
         ],
-        "human_version": "2.11.3_1.0.34",
-        "version": "1.0.34",
+        "human_version": "2.11.3_1.0.35",
+        "version": "1.0.35",
         "chart_metadata": {
             "name": "nginx-proxy-manager",
             "description": "Expose your services easily and securely",
@@ -18,7 +18,7 @@
                 "title": "Nginx Proxy Manager"
             },
             "type": "application",
-            "version": "1.0.34",
+            "version": "1.0.35",
             "apiVersion": "v2",
             "appVersion": "2.11.3",
             "kubeVersion": ">=1.16.0-0",
@@ -229,13 +229,29 @@
                         "type": "dict",
                         "attrs": [
                             {
+                                "variable": "hostNetwork",
+                                "label": "Host Network",
+                                "description": "Bind to the host network. While it's recommended to keep this disabled.",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            },
+                            {
                                 "variable": "webPort",
                                 "label": "Web Port",
                                 "description": "The port for the Nginx Proxy Manager Web UI.",
                                 "schema": {
                                     "type": "int",
                                     "default": 30020,
-                                    "min": 80,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "min": 9000,
                                     "max": 65535,
                                     "required": true
                                 }
@@ -247,7 +263,14 @@
                                 "schema": {
                                     "type": "int",
                                     "default": 30021,
-                                    "min": 80,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "min": 9000,
                                     "max": 65535,
                                     "required": true
                                 }
@@ -259,7 +282,14 @@
                                 "schema": {
                                     "type": "int",
                                     "default": 30022,
-                                    "min": 443,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "min": 9000,
                                     "max": 65535,
                                     "required": true
                                 }
