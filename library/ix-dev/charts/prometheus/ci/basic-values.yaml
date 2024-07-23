@@ -1,5 +1,0 @@
-prometheusStorage:
-  data:
-    type: pvc
-  config:
-    type: pvc

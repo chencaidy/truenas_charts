@@ -1,7 +1,0 @@
-esStorage:
-  data:
-    type: pvc
-
-esConfig:
-  password: some-secret
-  nodeName: Elastic Search Basic
