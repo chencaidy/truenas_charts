@@ -15,7 +15,7 @@
             "latest_version": "1.0.4",
             "latest_app_version": "3.1.14",
             "latest_human_version": "3.1.14_1.0.4",
-            "last_update": "2024-07-24 15:10:59",
+            "last_update": "2024-07-24 16:19:20",
             "name": "autobangumi",
             "recommended": false,
             "title": "AutoBangumi",
@@ -90,7 +90,7 @@
             "latest_version": "1.0.35",
             "latest_app_version": "2.11.3",
             "latest_human_version": "2.11.3_1.0.35",
-            "last_update": "2024-07-24 15:10:59",
+            "last_update": "2024-07-24 16:19:20",
             "name": "nginx-proxy-manager",
             "recommended": false,
             "title": "Nginx Proxy Manager",
@@ -120,19 +120,17 @@
         "aria2": {
             "app_readme": "<h1>Aria2</h1>\n<p><a href=\"https://github.com/aria2/aria2\">Aria2</a> is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. </p>",
             "categories": [
-                "media",
-                "torrent",
-                "download"
+                "media"
             ],
             "description": "Lightweight multi-protocol & multi-source, cross platform download utility .",
             "healthy": true,
             "healthy_error": null,
             "home": "https://aria2.github.io/",
             "location": "/workspace/community/aria2",
-            "latest_version": "1.0.0",
+            "latest_version": "1.0.1",
             "latest_app_version": "1.37.0",
-            "latest_human_version": "1.37.0_1.0.0",
-            "last_update": "2024-07-24 16:19:04",
+            "latest_human_version": "1.37.0_1.0.1",
+            "last_update": "2024-07-24 17:01:23",
             "name": "aria2",
             "recommended": false,
             "title": "Aria2",
@@ -143,7 +141,10 @@
                     "email": "chen@caidy.cc"
                 }
             ],
-            "tags": [],
+            "tags": [
+                "torrent",
+                "download"
+            ],
             "screenshots": [],
             "sources": [
                 "https://hub.docker.com/r/p3terx/aria2-pro",
