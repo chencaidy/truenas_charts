@@ -15,7 +15,7 @@
             "latest_version": "1.0.4",
             "latest_app_version": "3.1.14",
             "latest_human_version": "3.1.14_1.0.4",
-            "last_update": "2024-07-24 15:10:45",
+            "last_update": "2024-07-24 15:10:59",
             "name": "autobangumi",
             "recommended": false,
             "title": "AutoBangumi",
@@ -52,7 +52,7 @@
             "latest_version": "1.0.3",
             "latest_app_version": "v2.0.5",
             "latest_human_version": "v2.0.5_1.0.3",
-            "last_update": "2024-07-24 15:10:45",
+            "last_update": "2024-07-24 15:10:59",
             "name": "openspeedtest",
             "recommended": false,
             "title": "OpenSpeedTest",
@@ -90,7 +90,7 @@
             "latest_version": "1.0.35",
             "latest_app_version": "2.11.3",
             "latest_human_version": "2.11.3_1.0.35",
-            "last_update": "2024-07-24 08:34:30",
+            "last_update": "2024-07-24 15:10:59",
             "name": "nginx-proxy-manager",
             "recommended": false,
             "title": "Nginx Proxy Manager",
@@ -116,6 +116,41 @@
                 "https://hub.docker.com/r/jc21/nginx-proxy-manager"
             ],
             "icon_url": "https://media.sys.truenas.net/apps/nginx-proxy-manager/icons/icon.png"
+        },
+        "aria2": {
+            "app_readme": "<h1>Aria2</h1>\n<p><a href=\"https://github.com/aria2/aria2\">Aria2</a> is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. </p>",
+            "categories": [
+                "media",
+                "torrent",
+                "download"
+            ],
+            "description": "Lightweight multi-protocol & multi-source, cross platform download utility .",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://aria2.github.io/",
+            "location": "/workspace/community/aria2",
+            "latest_version": "1.0.0",
+            "latest_app_version": "1.37.0",
+            "latest_human_version": "1.37.0_1.0.0",
+            "last_update": "2024-07-24 16:19:04",
+            "name": "aria2",
+            "recommended": false,
+            "title": "Aria2",
+            "maintainers": [
+                {
+                    "name": "Caidy",
+                    "url": "https://github.com/chencaidy",
+                    "email": "chen@caidy.cc"
+                }
+            ],
+            "tags": [],
+            "screenshots": [],
+            "sources": [
+                "https://hub.docker.com/r/p3terx/aria2-pro",
+                "https://hub.docker.com/layers/p3terx/ariang",
+                "https://github.com/aria2/aria2"
+            ],
+            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/ariang.webp"
         }
     }
 }

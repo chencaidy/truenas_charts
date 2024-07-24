@@ -1,27 +1,27 @@
 {
-    "1.0.4": {
+    "1.0.0": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/workspace/community/autobangumi/1.0.4",
-        "last_update": "2024-07-24 15:10:45",
+        "location": "/workspace/community/aria2/1.0.0",
+        "last_update": "2024-07-24 16:19:04",
         "required_features": [
             "definitions/timezone",
             "normalize/ixVolume",
             "normalize/acl"
         ],
-        "human_version": "3.1.14_1.0.4",
-        "version": "1.0.4",
+        "human_version": "1.37.0_1.0.0",
+        "version": "1.0.0",
         "chart_metadata": {
-            "name": "autobangumi",
-            "description": "\u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177",
+            "name": "aria2",
+            "description": "Lightweight multi-protocol & multi-source, cross platform download utility .",
             "annotations": {
-                "title": "AutoBangumi"
+                "title": "Aria2"
             },
             "type": "application",
-            "version": "1.0.4",
+            "version": "1.0.0",
             "apiVersion": "v2",
-            "appVersion": "3.1.14",
+            "appVersion": "1.37.0",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
@@ -37,11 +37,12 @@
                     "version": "1.2.9"
                 }
             ],
-            "home": "https://www.autobangumi.org/",
-            "icon": "https://raw.githubusercontent.com/EstrellaXD/Auto_Bangumi/main/webui/public/images/pwa-192.png",
+            "home": "https://aria2.github.io/",
+            "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/ariang.webp",
             "sources": [
-                "https://github.com/EstrellaXD/Auto_Bangumi",
-                "https://www.autobangumi.org/"
+                "https://hub.docker.com/r/p3terx/aria2-pro",
+                "https://hub.docker.com/layers/p3terx/ariang",
+                "https://github.com/aria2/aria2"
             ],
             "keywords": [
                 "media",
@@ -56,7 +57,7 @@
                     "groupName": "root",
                     "gid": 0,
                     "uid": 0,
-                    "description": "AutoBangumi requires root privileges to run chown process."
+                    "description": "aria2 requires root privileges to run chown process."
                 }
             ],
             "capabilities": [
@@ -78,24 +79,24 @@
         "schema": {
             "groups": [
                 {
-                    "name": "AutoBangumi Configuration",
-                    "description": "Configure AutoBangumi"
+                    "name": "Aria2 Configuration",
+                    "description": "Configure Aria2"
                 },
                 {
                     "name": "User and Group Configuration",
-                    "description": "Configure User and Group for AutoBangumi"
+                    "description": "Configure User and Group for Aria2"
                 },
                 {
                     "name": "Network Configuration",
-                    "description": "Configure Network for AutoBangumi"
+                    "description": "Configure Network for Aria2"
                 },
                 {
                     "name": "Storage Configuration",
-                    "description": "Configure Storage for AutoBangumi"
+                    "description": "Configure Storage for Aria2"
                 },
                 {
                     "name": "Resources Configuration",
-                    "description": "Configure Resources for AutoBangumi"
+                    "description": "Configure Resources for Aria2"
                 }
             ],
             "portals": {
@@ -115,7 +116,7 @@
             "questions": [
                 {
                     "variable": "TZ",
-                    "group": "AutoBangumi Configuration",
+                    "group": "Aria2 Configuration",
                     "label": "Timezone",
                     "schema": {
                         "type": "string",
@@ -137,16 +138,16 @@
                     }
                 },
                 {
-                    "variable": "abConfig",
+                    "variable": "ariaConfig",
                     "label": "",
-                    "group": "AutoBangumi Configuration",
+                    "group": "Aria2 Configuration",
                     "schema": {
                         "type": "dict",
                         "attrs": [
                             {
                                 "variable": "additionalEnvs",
                                 "label": "Additional Environment Variables",
-                                "description": "Configure additional environment variables for AutoBangumi.",
+                                "description": "Configure additional environment variables for Aria2.",
                                 "schema": {
                                     "type": "list",
                                     "default": [],
@@ -183,7 +184,7 @@
                     }
                 },
                 {
-                    "variable": "abID",
+                    "variable": "ariaID",
                     "label": "",
                     "group": "User and Group Configuration",
                     "schema": {
@@ -192,7 +193,7 @@
                             {
                                 "variable": "user",
                                 "label": "User ID",
-                                "description": "The user id that AutoBangumi will run as.",
+                                "description": "The user id that Aria2 will run as.",
                                 "schema": {
                                     "type": "int",
                                     "min": 2,
@@ -203,7 +204,7 @@
                             {
                                 "variable": "group",
                                 "label": "Group ID",
-                                "description": "The group id that AutoBangumi will run as.",
+                                "description": "The group id that Aria2 will run as.",
                                 "schema": {
                                     "type": "int",
                                     "min": 2,
@@ -215,19 +216,28 @@
                     }
                 },
                 {
-                    "variable": "abNetwork",
+                    "variable": "ariaNetwork",
                     "label": "",
                     "group": "Network Configuration",
                     "schema": {
                         "type": "dict",
                         "attrs": [
                             {
+                                "variable": "hostNetwork",
+                                "label": "Host Network",
+                                "description": "Bind to the host network. It's recommended to keep this disabled.</br>\n",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            },
+                            {
                                 "variable": "webPort",
                                 "label": "Web Port",
-                                "description": "The port for the AutoBangumi Web UI.",
+                                "description": "The port for the Ariang Web UI.",
                                 "schema": {
                                     "type": "int",
-                                    "default": 37892,
+                                    "default": 36880,
                                     "show_if": [
                                         [
                                             "hostNetwork",
@@ -241,19 +251,48 @@
                                 }
                             },
                             {
-                                "variable": "hostNetwork",
-                                "label": "Host Network",
-                                "description": "Bind to the host network. It's recommended to keep this disabled.</br>\n",
+                                "variable": "rpcPort",
+                                "label": "RPC Port",
+                                "description": "The port for the Aria2 RPC.",
                                 "schema": {
-                                    "type": "boolean",
-                                    "default": false
+                                    "type": "int",
+                                    "default": 36800,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "min": 9000,
+                                    "max": 65535,
+                                    "required": true
+                                }
+                            },
+                            {
+                                "variable": "listenPort",
+                                "label": "RPC Port",
+                                "description": "The port for the Aria2 Listen.",
+                                "schema": {
+                                    "type": "int",
+                                    "default": 36888,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "min": 9000,
+                                    "max": 65535,
+                                    "required": true
                                 }
                             }
                         ]
                     }
                 },
                 {
-                    "variable": "abStorage",
+                    "variable": "ariaStorage",
                     "label": "",
                     "group": "Storage Configuration",
                     "schema": {
@@ -261,8 +300,8 @@
                         "attrs": [
                             {
                                 "variable": "config",
-                                "label": "AutoBangumi Config Storage",
-                                "description": "The path to store AutoBangumi Configuration.",
+                                "label": "Aria2 Config Storage",
+                                "description": "The path to store Aria2 Configuration.",
                                 "schema": {
                                     "type": "dict",
                                     "attrs": [
@@ -581,9 +620,9 @@
                                 }
                             },
                             {
-                                "variable": "data",
-                                "label": "AutoBangumi Data Storage",
-                                "description": "The path to store AutoBangumi Data.",
+                                "variable": "downloads",
+                                "label": "Aria2 Downloads Storage",
+                                "description": "The path to store Aria2 Downloads.",
                                 "schema": {
                                     "type": "dict",
                                     "attrs": [
@@ -643,7 +682,7 @@
                                                             "required": true,
                                                             "immutable": true,
                                                             "hidden": true,
-                                                            "default": "data"
+                                                            "default": "downloads"
                                                         }
                                                     },
                                                     {
@@ -904,7 +943,7 @@
                             {
                                 "variable": "additionalStorages",
                                 "label": "Additional Storage",
-                                "description": "AutoBangumi additional storage",
+                                "description": "Aria2 additional storage",
                                 "schema": {
                                     "type": "list",
                                     "default": [],
@@ -1345,7 +1384,7 @@
                                         {
                                             "variable": "cpu",
                                             "label": "CPU",
-                                            "description": "CPU limit for AutoBangumi.",
+                                            "description": "CPU limit for Aria2.",
                                             "schema": {
                                                 "type": "string",
                                                 "max_length": 6,
@@ -1358,7 +1397,7 @@
                                         {
                                             "variable": "memory",
                                             "label": "Memory",
-                                            "description": "Memory limit for AutoBangumi.",
+                                            "description": "Memory limit for Aria2.",
                                             "schema": {
                                                 "type": "string",
                                                 "max_length": 12,
@@ -1376,8 +1415,8 @@
                 }
             ]
         },
-        "app_readme": "<h1>AutoBangumi</h1>\n<p><a href=\"https://www.autobangumi.org/\">AutoBangumi</a> - \u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177</p>",
-        "detailed_readme": "<h1>AutoBangumi</h1>\n<p><a href=\"https://www.autobangumi.org/\">AutoBangumi</a> - \u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177</p>",
+        "app_readme": "<h1>Aria2</h1>\n<p><a href=\"https://github.com/aria2/aria2\">Aria2</a> is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. </p>",
+        "detailed_readme": "<h1>Aria2</h1>\n<p><a href=\"https://github.com/aria2/aria2\">Aria2</a> is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. </p>",
         "changelog": null
     }
 }
