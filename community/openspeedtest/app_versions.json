@@ -1,0 +1,261 @@
+{
+    "1.0.0": {
+        "healthy": true,
+        "supported": true,
+        "healthy_error": null,
+        "location": "/workspace/community/openspeedtest/1.0.0",
+        "last_update": "2024-07-24 05:40:18",
+        "required_features": [],
+        "human_version": "v2.0.5_1.0.0",
+        "version": "1.0.0",
+        "chart_metadata": {
+            "name": "openspeedtest",
+            "description": "Free & Open-Source HTML5 Network Performance Estimation Tool.",
+            "annotations": {
+                "title": "OpenSpeedTest"
+            },
+            "type": "application",
+            "version": "1.0.0",
+            "apiVersion": "v2",
+            "appVersion": "v2.0.5",
+            "kubeVersion": ">=1.16.0-0",
+            "maintainers": [
+                {
+                    "name": "truenas",
+                    "url": "https://www.truenas.com/",
+                    "email": "dev@ixsystems.com"
+                }
+            ],
+            "dependencies": [
+                {
+                    "name": "common",
+                    "repository": "file://../../../common",
+                    "version": "1.2.9"
+                }
+            ],
+            "home": "https://openspeedtest.com/",
+            "icon": "https://raw.githubusercontent.com/openspeedtest/Speed-Test/main/assets/images/icons/android-chrome-192x192.png",
+            "sources": [
+                "https://openspeedtest.com",
+                "https://github.com/chencaidy/truenas_charts/tree/master/community/openspeedtest",
+                "https://hub.docker.com/r/openspeedtest/latest"
+            ],
+            "keywords": [
+                "network"
+            ]
+        },
+        "app_metadata": {
+            "runAsContext": [
+                {
+                    "userName": "openspeedtest",
+                    "groupName": "openspeedtest",
+                    "gid": 568,
+                    "uid": 568,
+                    "description": "OpenSpeedTest can run as any non-root user."
+                }
+            ],
+            "capabilities": [],
+            "hostMounts": []
+        },
+        "schema": {
+            "groups": [
+                {
+                    "name": "OpenSpeedTest Configuration",
+                    "description": "Configure OpenSpeedTest"
+                },
+                {
+                    "name": "User and Group Configuration",
+                    "description": "Configure User and Group for OpenSpeedTest"
+                },
+                {
+                    "name": "Network Configuration",
+                    "description": "Configure Network for OpenSpeedTest"
+                },
+                {
+                    "name": "Resources Configuration",
+                    "description": "Configure Resources for OpenSpeedTest"
+                }
+            ],
+            "portals": {
+                "web_portal": {
+                    "protocols": [
+                        "$kubernetes-resource_configmap_portal_protocol"
+                    ],
+                    "host": [
+                        "$kubernetes-resource_configmap_portal_host"
+                    ],
+                    "ports": [
+                        "$kubernetes-resource_configmap_portal_port"
+                    ],
+                    "path": "$kubernetes-resource_configmap_portal_path"
+                }
+            },
+            "questions": [
+                {
+                    "variable": "ostConfig",
+                    "label": "",
+                    "group": "OpenSpeedTest Configuration",
+                    "schema": {
+                        "type": "dict",
+                        "attrs": [
+                            {
+                                "variable": "additionalEnvs",
+                                "label": "Additional Environment Variables",
+                                "description": "Configure additional environment variables for OpenSpeedTest.",
+                                "schema": {
+                                    "type": "list",
+                                    "default": [],
+                                    "items": [
+                                        {
+                                            "variable": "env",
+                                            "label": "Environment Variable",
+                                            "schema": {
+                                                "type": "dict",
+                                                "attrs": [
+                                                    {
+                                                        "variable": "name",
+                                                        "label": "Name",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "variable": "value",
+                                                        "label": "Value",
+                                                        "schema": {
+                                                            "type": "string",
+                                                            "required": true
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "variable": "ostRunAs",
+                    "label": "",
+                    "group": "User and Group Configuration",
+                    "schema": {
+                        "type": "dict",
+                        "attrs": [
+                            {
+                                "variable": "user",
+                                "label": "User ID",
+                                "description": "The user id that OpenSpeedTest will run as.",
+                                "schema": {
+                                    "type": "int",
+                                    "min": 2,
+                                    "default": 568,
+                                    "required": true
+                                }
+                            },
+                            {
+                                "variable": "group",
+                                "label": "Group ID",
+                                "description": "The group id that OpenSpeedTest will run as.",
+                                "schema": {
+                                    "type": "int",
+                                    "min": 2,
+                                    "default": 568,
+                                    "required": true
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "variable": "ostNetwork",
+                    "label": "",
+                    "group": "Network Configuration",
+                    "schema": {
+                        "type": "dict",
+                        "attrs": [
+                            {
+                                "variable": "webPort",
+                                "label": "Web Port",
+                                "description": "The port for the OpenSpeedTest Web UI.",
+                                "schema": {
+                                    "type": "int",
+                                    "default": 10256,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
+                                    "min": 9000,
+                                    "max": 65535,
+                                    "required": true
+                                }
+                            },
+                            {
+                                "variable": "hostNetwork",
+                                "label": "Host Network",
+                                "description": "Bind to the host network. It's recommended to keep this disabled.</br>\n",
+                                "schema": {
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "variable": "resources",
+                    "label": "Resources Configuration",
+                    "group": "Resources Configuration",
+                    "schema": {
+                        "type": "dict",
+                        "attrs": [
+                            {
+                                "variable": "limits",
+                                "label": "Limits",
+                                "schema": {
+                                    "type": "dict",
+                                    "attrs": [
+                                        {
+                                            "variable": "cpu",
+                                            "label": "CPU",
+                                            "description": "CPU limit for OpenSpeedTest.",
+                                            "schema": {
+                                                "type": "string",
+                                                "max_length": 6,
+                                                "valid_chars": "^(0\\.[1-9]|[1-9][0-9]*)(\\.[0-9]|m?)$",
+                                                "valid_chars_error": "Valid CPU limit formats are</br>\n- Plain Integer - eg. 1</br>\n- Float - eg. 0.5</br>\n- Milicpu - eg. 500m\n",
+                                                "default": "4000m",
+                                                "required": true
+                                            }
+                                        },
+                                        {
+                                            "variable": "memory",
+                                            "label": "Memory",
+                                            "description": "Memory limit for OpenSpeedTest.",
+                                            "schema": {
+                                                "type": "string",
+                                                "max_length": 12,
+                                                "valid_chars": "^[1-9][0-9]*([EPTGMK]i?|e[0-9]+)?$",
+                                                "valid_chars_error": "Valid Memory limit formats are</br>\n- Suffixed with E/P/T/G/M/K - eg. 1G</br>\n- Suffixed with Ei/Pi/Ti/Gi/Mi/Ki - eg. 1Gi</br>\n- Plain Integer in bytes - eg. 1024</br>\n- Exponent - eg. 134e6\n",
+                                                "default": "8Gi",
+                                                "required": true
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "app_readme": "<h1>OpenSpeedTest</h1>\n<p><a href=\"https://openspeedtest.com/\">SpeedTest</a> by OpenSpeedTest\u2122 is a Free and Open-Source HTML5 Network Speed Test Software.</p>",
+        "detailed_readme": "<h1>OpenSpeedTest</h1>\n<p><a href=\"https://openspeedtest.com/\">SpeedTest</a> by OpenSpeedTest\u2122 is a Free and Open-Source HTML5 Network Speed Test Software.</p>",
+        "changelog": null
+    }
+}
