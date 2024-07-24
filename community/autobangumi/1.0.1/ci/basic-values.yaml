@@ -1,0 +1,12 @@
+autobangumiNetwork:
+  webPort: 37892
+
+autobangumiRunAs:
+  user: 1000
+  group: 1000
+
+autobangumiStorage:
+  data:
+    type: pvc
+  config:
+    type: pvc

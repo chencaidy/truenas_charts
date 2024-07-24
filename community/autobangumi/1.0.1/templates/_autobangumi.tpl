@@ -12,8 +12,13 @@ workload:
           primary: true
           imageSelector: image
           securityContext:
-            runAsUser: {{ .Values.autobangumiRunAs.user }}
-            runAsGroup: {{ .Values.autobangumiRunAs.group }}
+            runAsUser: 0
+            runAsGroup: 0
+            readOnlyRootFilesystem: false
+            runAsNonRoot: false
+          fixedEnv:
+            PUID: {{ .Values.autobangumiRunAs.user }}
+            PGID: {{ .Values.autobangumiRunAs.group }}
           {{ with .Values.autobangumiConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}
