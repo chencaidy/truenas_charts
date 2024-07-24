@@ -1,16 +1,17 @@
 {
-    "1.0.2": {
+    "1.0.3": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/workspace/community/autobangumi/1.0.2",
-        "last_update": "2024-07-24 08:34:24",
+        "location": "/workspace/community/autobangumi/1.0.3",
+        "last_update": "2024-07-24 13:42:53",
         "required_features": [
             "normalize/acl",
+            "definitions/timezone",
             "normalize/ixVolume"
         ],
-        "human_version": "3.1.14_1.0.2",
-        "version": "1.0.2",
+        "human_version": "3.1.14_1.0.3",
+        "version": "1.0.3",
         "chart_metadata": {
             "name": "autobangumi",
             "description": "\u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177",
@@ -18,7 +19,7 @@
                 "title": "AutoBangumi"
             },
             "type": "application",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "apiVersion": "v2",
             "appVersion": "3.1.14",
             "kubeVersion": ">=1.16.0-0",
@@ -112,6 +113,29 @@
                 }
             },
             "questions": [
+                {
+                    "variable": "TZ",
+                    "group": "AutoBangumi Configuration",
+                    "label": "Timezone",
+                    "schema": {
+                        "type": "string",
+                        "default": "America/Los_Angeles",
+                        "required": true,
+                        "$ref": [
+                            "definitions/timezone"
+                        ],
+                        "enum": [
+                            {
+                                "value": "Asia/Damascus",
+                                "description": "'Asia/Damascus' timezone"
+                            },
+                            {
+                                "value": "Asia/Saigon",
+                                "description": "'Asia/Saigon' timezone"
+                            }
+                        ]
+                    }
+                },
                 {
                     "variable": "autobangumiConfig",
                     "label": "",
