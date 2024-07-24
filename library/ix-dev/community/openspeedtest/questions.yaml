@@ -1,8 +1,6 @@
 groups:
   - name: OpenSpeedTest Configuration
     description: Configure OpenSpeedTest
-  - name: User and Group Configuration
-    description: Configure User and Group for OpenSpeedTest
   - name: Network Configuration
     description: Configure Network for OpenSpeedTest
   - name: Resources Configuration
@@ -47,29 +45,6 @@ questions:
                       schema:
                         type: string
                         required: true
-
-  - variable: ostRunAs
-    label: ""
-    group: User and Group Configuration
-    schema:
-      type: dict
-      attrs:
-        - variable: user
-          label: User ID
-          description: The user id that OpenSpeedTest will run as.
-          schema:
-            type: int
-            min: 2
-            default: 568
-            required: true
-        - variable: group
-          label: Group ID
-          description: The group id that OpenSpeedTest will run as.
-          schema:
-            type: int
-            min: 2
-            default: 568
-            required: true
 
   - variable: ostNetwork
     label: ""

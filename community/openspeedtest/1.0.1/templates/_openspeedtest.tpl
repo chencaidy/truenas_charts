@@ -12,8 +12,10 @@ workload:
           primary: true
           imageSelector: image
           securityContext:
-            runAsUser: {{ .Values.ostRunAs.user }}
-            runAsGroup: {{ .Values.ostRunAs.group }}
+            runAsUser: 101
+            runAsGroup: 101
+            readOnlyRootFilesystem: false
+            runAsNonRoot: false
           {{ with .Values.ostConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}

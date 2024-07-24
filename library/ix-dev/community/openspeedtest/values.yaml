@@ -14,7 +14,3 @@ ostConfig:
 ostNetwork:
   webPort: 10256
   hostNetwork: false
-
-ostRunAs:
-  user: 568
-  group: 568
