@@ -1,8 +1,0 @@
-runAsContext:
-  - userName: autobangumi
-    groupName: autobangumi
-    gid: 568
-    uid: 568
-    description: AutoBangumi can run as any non-root user.
-capabilities: []
-hostMounts: []

@@ -16,6 +16,11 @@ workload:
             runAsGroup: 0
             readOnlyRootFilesystem: false
             runAsNonRoot: false
+            capabilities:
+              add:
+                - CHOWN
+                - SETGID
+                - SETUID
           fixedEnv:
             PUID: {{ .Values.autobangumiRunAs.user }}
             PGID: {{ .Values.autobangumiRunAs.group }}
@@ -42,12 +47,7 @@ workload:
               type: http
               port: 7892
               path: /
-      initContainers:
-      {{- include "ix.v1.common.app.permissions" (dict "containerName" "01-permissions"
-                                                        "UID" .Values.autobangumiRunAs.user
-                                                        "GID" .Values.autobangumiRunAs.group
-                                                        "mode" "check"
-                                                        "type" "install") | nindent 8 }}
+
 {{/* Service */}}
 service:
   autobangumi:
