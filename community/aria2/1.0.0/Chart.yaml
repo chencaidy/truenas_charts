@@ -1,0 +1,27 @@
+name: aria2
+description: Lightweight multi-protocol & multi-source, cross platform download utility .
+annotations:
+  title: Aria2
+type: application
+version: 1.0.0
+apiVersion: v2
+appVersion: 1.37.0
+kubeVersion: '>=1.16.0-0'
+maintainers:
+  - name: Caidy
+    url: https://github.com/chencaidy
+    email: chen@caidy.cc
+dependencies:
+  - name: common
+    repository: file://../../../common
+    version: 1.2.9
+home: https://aria2.github.io/
+icon: https://truecharts.org/img/hotlink-ok/chart-icons/ariang.webp
+sources:
+  - https://hub.docker.com/r/p3terx/aria2-pro
+  - https://hub.docker.com/layers/p3terx/ariang
+  - https://github.com/aria2/aria2
+keywords:
+  - media
+  - torrent
+  - download

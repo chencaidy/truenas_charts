@@ -1,0 +1,38 @@
+serverImage:
+  repository: p3terx/aria2-pro
+  pullPolicy: IfNotPresent
+  tag: latest
+
+webImage:
+  repository: p3terx/ariang
+  pullPolicy: IfNotPresent
+  tag: latest
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+ariaConfig:
+  additionalEnvs: []
+
+ariaNetwork:
+  hostNetwork: false
+  webPort: 36880
+  rpcPort: 36800
+  listenPort: 36888
+
+ariaID:
+  user: 568
+  group: 568
+
+ariaStorage:
+  config:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: config
+  downloads:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: downloads
+  additionalStorages: []

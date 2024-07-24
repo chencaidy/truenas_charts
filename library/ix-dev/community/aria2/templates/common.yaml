@@ -1,0 +1,10 @@
+{{- include "ix.v1.common.loader.init" . -}}
+
+{{/* Merge the templates with Values */}}
+{{- $_ := mustMergeOverwrite .Values (include "aria2.workload" $ | fromYaml) -}}
+{{- $_ := mustMergeOverwrite .Values (include "ariang.workload" $ | fromYaml) -}}
+
+{{/* Create the configmap for portal manually*/}}
+{{- include "ariang.portal" $ -}}
+
+{{- include "ix.v1.common.loader.apply" . -}}

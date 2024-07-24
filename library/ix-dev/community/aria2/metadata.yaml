@@ -1,0 +1,14 @@
+runAsContext:
+  - userName: root
+    groupName: root
+    gid: 0
+    uid: 0
+    description: aria2 requires root privileges to run chown process.
+capabilities:
+  - name: CHOWN
+    description: Collabora and Nginx are able to chown files.
+  - name: SETGID
+    description: Nginx is able to set group ID for it's sub-processes.
+  - name: SETUID
+    description: Nginx is able to set user ID for it's sub-processes.
+hostMounts: []
