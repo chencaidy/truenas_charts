@@ -5,19 +5,17 @@
         "autobangumi": {
             "app_readme": "<h1>AutoBangumi</h1>\n<p><a href=\"https://www.autobangumi.org/\">AutoBangumi</a> - \u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177</p>",
             "categories": [
-                "media",
-                "torrent",
-                "download"
+                "media"
             ],
             "description": "\u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177",
             "healthy": true,
             "healthy_error": null,
             "home": "https://www.autobangumi.org/",
             "location": "/workspace/community/autobangumi",
-            "latest_version": "1.0.0",
+            "latest_version": "1.0.1",
             "latest_app_version": "3.1.14",
-            "latest_human_version": "3.1.14_1.0.0",
-            "last_update": "2024-07-24 07:14:50",
+            "latest_human_version": "3.1.14_1.0.1",
+            "last_update": "2024-07-24 08:04:32",
             "name": "autobangumi",
             "recommended": false,
             "title": "AutoBangumi",
@@ -28,8 +26,13 @@
                     "email": "chen@caidy.cc"
                 }
             ],
-            "tags": [],
-            "screenshots": [],
+            "tags": [
+                "torrent",
+                "download"
+            ],
+            "screenshots": [
+                "https://www.autobangumi.org/assets/window.24e2dd52.png"
+            ],
             "sources": [
                 "https://github.com/EstrellaXD/Auto_Bangumi",
                 "https://www.autobangumi.org/"
@@ -46,10 +49,10 @@
             "healthy_error": null,
             "home": "https://openspeedtest.com/",
             "location": "/workspace/community/openspeedtest",
-            "latest_version": "1.0.1",
+            "latest_version": "1.0.2",
             "latest_app_version": "v2.0.5",
-            "latest_human_version": "v2.0.5_1.0.1",
-            "last_update": "2024-07-24 06:06:22",
+            "latest_human_version": "v2.0.5_1.0.2",
+            "last_update": "2024-07-24 08:04:32",
             "name": "openspeedtest",
             "recommended": false,
             "title": "OpenSpeedTest",
@@ -87,7 +90,7 @@
             "latest_version": "1.0.35",
             "latest_app_version": "2.11.3",
             "latest_human_version": "2.11.3_1.0.35",
-            "last_update": "2024-07-23 20:17:24",
+            "last_update": "2024-07-24 07:15:11",
             "name": "nginx-proxy-manager",
             "recommended": false,
             "title": "Nginx Proxy Manager",
