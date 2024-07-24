@@ -1,0 +1,31 @@
+image:
+  repository: ghcr.io/estrellaxd/auto_bangumi
+  pullPolicy: IfNotPresent
+  tag: 3.1.14
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+autobangumiConfig:
+  additionalEnvs: []
+
+autobangumiNetwork:
+  webPort: 37892
+  hostNetwork: false
+
+autobangumiRunAs:
+  user: 568
+  group: 568
+
+autobangumiStorage:
+  config:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: config
+  data:
+    type: ixVolume
+    ixVolumeConfig:
+      datasetName: downloads
+  additionalStorages: []
