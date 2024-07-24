@@ -8,18 +8,18 @@ resources:
     cpu: 4000m
     memory: 8Gi
 
-autobangumiConfig:
+abConfig:
   additionalEnvs: []
 
-autobangumiNetwork:
+abNetwork:
   webPort: 37892
   hostNetwork: false
 
-autobangumiRunAs:
+abID:
   user: 568
   group: 568
 
-autobangumiStorage:
+abStorage:
   config:
     type: ixVolume
     ixVolumeConfig:

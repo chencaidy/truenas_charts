@@ -31,7 +31,7 @@ questions:
       $ref:
         - definitions/timezone
 
-  - variable: autobangumiConfig
+  - variable: abConfig
     label: ""
     group: AutoBangumi Configuration
     schema:
@@ -60,7 +60,7 @@ questions:
                         type: string
                         required: true
 
-  - variable: autobangumiRunAs
+  - variable: abID
     label: ""
     group: User and Group Configuration
     schema:
@@ -83,7 +83,7 @@ questions:
             default: 568
             required: true
 
-  - variable: autobangumiNetwork
+  - variable: abNetwork
     label: ""
     group: Network Configuration
     schema:
@@ -95,6 +95,7 @@ questions:
           schema:
             type: int
             default: 37892
+            show_if: [["hostNetwork", "=", false]]
             min: 9000
             max: 65535
             required: true
@@ -106,7 +107,7 @@ questions:
             type: boolean
             default: false
 
-  - variable: autobangumiStorage
+  - variable: abStorage
     label: ""
     group: Storage Configuration
     schema:

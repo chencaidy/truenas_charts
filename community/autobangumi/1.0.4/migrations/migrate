@@ -48,7 +48,7 @@ def storage_migrate(storage):
 
 
 def migrate(values):
-    storage_key = 'autobangumiStorage'
+    storage_key = 'abStorage'
     storages = ['data', 'config']
 
     for storage in storages:

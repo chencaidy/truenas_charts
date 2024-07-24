@@ -12,5 +12,5 @@ ostConfig:
   additionalEnvs: []
 
 ostNetwork:
-  webPort: 10256
+  webPort: 33000
   hostNetwork: false

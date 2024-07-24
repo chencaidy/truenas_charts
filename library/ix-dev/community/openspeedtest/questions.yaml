@@ -57,7 +57,7 @@ questions:
           description: The port for the OpenSpeedTest Web UI.
           schema:
             type: int
-            default: 10256
+            default: 33000
             show_if: [["hostNetwork", "=", false]]
             min: 9000
             max: 65535

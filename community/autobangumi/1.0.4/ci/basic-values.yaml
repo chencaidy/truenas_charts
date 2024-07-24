@@ -1,11 +1,11 @@
-autobangumiNetwork:
+abNetwork:
   webPort: 37892
 
-autobangumiRunAs:
+abID:
   user: 1000
   group: 1000
 
-autobangumiStorage:
+abStorage:
   data:
     type: pvc
   config:

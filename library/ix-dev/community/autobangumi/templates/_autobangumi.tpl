@@ -5,7 +5,7 @@ workload:
     primary: true
     type: Deployment
     podSpec:
-      hostNetwork: {{ .Values.autobangumiNetwork.hostNetwork }}
+      hostNetwork: {{ .Values.abNetwork.hostNetwork }}
       containers:
         autobangumi:
           enabled: true
@@ -22,9 +22,9 @@ workload:
                 - SETGID
                 - SETUID
           fixedEnv:
-            PUID: {{ .Values.autobangumiRunAs.user }}
-            PGID: {{ .Values.autobangumiRunAs.group }}
-          {{ with .Values.autobangumiConfig.additionalEnvs }}
+            PUID: {{ .Values.abID.user }}
+            PGID: {{ .Values.abID.group }}
+          {{ with .Values.abConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}
             - name: {{ $env.name }}
@@ -59,8 +59,8 @@ service:
       webui:
         enabled: true
         primary: true
-        port: {{ .Values.autobangumiNetwork.webPort }}
-        nodePort: {{ .Values.autobangumiNetwork.webPort }}
+        port: {{ .Values.abNetwork.webPort }}
+        nodePort: {{ .Values.abNetwork.webPort }}
         targetPort: 7892
         targetSelector: autobangumi
 
@@ -68,29 +68,29 @@ service:
 persistence:
   config:
     enabled: true
-    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.autobangumiStorage.config) | nindent 4 }}
+    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.abStorage.config) | nindent 4 }}
     targetSelector:
       autobangumi:
         autobangumi:
           mountPath: /app/config
-        {{- if and (eq .Values.autobangumiStorage.config.type "ixVolume")
-                  (not (.Values.autobangumiStorage.config.ixVolumeConfig | default dict).aclEnable) }}
+        {{- if and (eq .Values.abStorage.config.type "ixVolume")
+                  (not (.Values.abStorage.config.ixVolumeConfig | default dict).aclEnable) }}
         01-permissions:
           mountPath: /mnt/directories/config
         {{- end }}
   data:
     enabled: true
-    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.autobangumiStorage.data) | nindent 4 }}
+    {{- include "ix.v1.common.app.storageOptions" (dict "storage" .Values.abStorage.data) | nindent 4 }}
     targetSelector:
       autobangumi:
         autobangumi:
           mountPath: /app/data
-        {{- if and (eq .Values.autobangumiStorage.data.type "ixVolume")
-                  (not (.Values.autobangumiStorage.data.ixVolumeConfig | default dict).aclEnable) }}
+        {{- if and (eq .Values.abStorage.data.type "ixVolume")
+                  (not (.Values.abStorage.data.ixVolumeConfig | default dict).aclEnable) }}
         01-permissions:
           mountPath: /mnt/directories/data
         {{- end }}
-  {{- range $idx, $storage := .Values.autobangumiStorage.additionalStorages }}
+  {{- range $idx, $storage := .Values.abStorage.additionalStorages }}
   {{ printf "autobangumi-%v:" (int $idx) }}
     enabled: true
     {{- include "ix.v1.common.app.storageOptions" (dict "storage" $storage) | nindent 4 }}
