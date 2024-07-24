@@ -1,17 +1,17 @@
 {
-    "1.0.3": {
+    "1.0.4": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/workspace/community/autobangumi/1.0.3",
-        "last_update": "2024-07-24 13:42:53",
+        "location": "/workspace/community/autobangumi/1.0.4",
+        "last_update": "2024-07-24 15:10:45",
         "required_features": [
             "normalize/acl",
-            "definitions/timezone",
-            "normalize/ixVolume"
+            "normalize/ixVolume",
+            "definitions/timezone"
         ],
-        "human_version": "3.1.14_1.0.3",
-        "version": "1.0.3",
+        "human_version": "3.1.14_1.0.4",
+        "version": "1.0.4",
         "chart_metadata": {
             "name": "autobangumi",
             "description": "\u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177",
@@ -19,7 +19,7 @@
                 "title": "AutoBangumi"
             },
             "type": "application",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "apiVersion": "v2",
             "appVersion": "3.1.14",
             "kubeVersion": ">=1.16.0-0",
@@ -137,7 +137,7 @@
                     }
                 },
                 {
-                    "variable": "autobangumiConfig",
+                    "variable": "abConfig",
                     "label": "",
                     "group": "AutoBangumi Configuration",
                     "schema": {
@@ -183,7 +183,7 @@
                     }
                 },
                 {
-                    "variable": "autobangumiRunAs",
+                    "variable": "abID",
                     "label": "",
                     "group": "User and Group Configuration",
                     "schema": {
@@ -215,7 +215,7 @@
                     }
                 },
                 {
-                    "variable": "autobangumiNetwork",
+                    "variable": "abNetwork",
                     "label": "",
                     "group": "Network Configuration",
                     "schema": {
@@ -228,6 +228,13 @@
                                 "schema": {
                                     "type": "int",
                                     "default": 37892,
+                                    "show_if": [
+                                        [
+                                            "hostNetwork",
+                                            "=",
+                                            false
+                                        ]
+                                    ],
                                     "min": 9000,
                                     "max": 65535,
                                     "required": true
@@ -246,7 +253,7 @@
                     }
                 },
                 {
-                    "variable": "autobangumiStorage",
+                    "variable": "abStorage",
                     "label": "",
                     "group": "Storage Configuration",
                     "schema": {

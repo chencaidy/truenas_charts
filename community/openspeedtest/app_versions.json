@@ -1,13 +1,13 @@
 {
-    "1.0.2": {
+    "1.0.3": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/workspace/community/openspeedtest/1.0.2",
-        "last_update": "2024-07-24 08:04:32",
+        "location": "/workspace/community/openspeedtest/1.0.3",
+        "last_update": "2024-07-24 15:10:45",
         "required_features": [],
-        "human_version": "v2.0.5_1.0.2",
-        "version": "1.0.2",
+        "human_version": "v2.0.5_1.0.3",
+        "version": "1.0.3",
         "chart_metadata": {
             "name": "openspeedtest",
             "description": "Free & Open-Source HTML5 Network Performance Estimation Tool.",
@@ -15,7 +15,7 @@
                 "title": "OpenSpeedTest"
             },
             "type": "application",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "apiVersion": "v2",
             "appVersion": "v2.0.5",
             "kubeVersion": ">=1.16.0-0",
@@ -146,7 +146,7 @@
                                 "description": "The port for the OpenSpeedTest Web UI.",
                                 "schema": {
                                     "type": "int",
-                                    "default": 10256,
+                                    "default": 33000,
                                     "show_if": [
                                         [
                                             "hostNetwork",
