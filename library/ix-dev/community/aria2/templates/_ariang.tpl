@@ -8,6 +8,7 @@ workload:
       containers:
         ariang:
           enabled: true
+          primary: true
           imageSelector: webImage
           securityContext:
             runAsUser: {{ .Values.ariaID.user }}

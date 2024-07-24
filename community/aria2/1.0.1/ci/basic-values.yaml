@@ -1,0 +1,14 @@
+ariaNetwork:
+  webPort: 36880
+  rpcPort: 36800
+  listenPort: 36888
+
+ariaID:
+  user: 1000
+  group: 1000
+
+ariaStorage:
+  config:
+    type: pvc
+  downloads:
+    type: pvc

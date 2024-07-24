@@ -21,9 +21,12 @@ workload:
                 - CHOWN
                 - SETGID
                 - SETUID
+                - FOWNER
+                - DAC_OVERRIDE
           env:
             RPC_PORT: 6800
             LISTEN_PORT: 6888
+            RPC_SECRET: {{ .Values.ariaConfig.rpcSecret }}
           fixedEnv:
             PUID: {{ .Values.ariaID.user }}
             PGID: {{ .Values.ariaID.group }}

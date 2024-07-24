@@ -37,6 +37,14 @@ questions:
     schema:
       type: dict
       attrs:
+        - variable: rpcSecret
+          label: RPC Secret
+          description: RPC secret authorization token.
+          schema:
+            type: string
+            default: P3TERX
+            required: true
+            private: true
         - variable: additionalEnvs
           label: Additional Environment Variables
           description: Configure additional environment variables for Aria2.
@@ -117,7 +125,7 @@ questions:
             max: 65535
             required: true
         - variable: listenPort
-          label: RPC Port
+          label: Listen Port
           description: The port for the Aria2 Listen.
           schema:
             type: int

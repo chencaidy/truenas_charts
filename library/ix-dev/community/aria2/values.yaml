@@ -14,6 +14,7 @@ resources:
     memory: 8Gi
 
 ariaConfig:
+  rpcSecret: P3TERX
   additionalEnvs: []
 
 ariaNetwork:
