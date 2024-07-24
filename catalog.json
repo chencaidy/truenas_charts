@@ -5,17 +5,17 @@
         "openspeedtest": {
             "app_readme": "<h1>OpenSpeedTest</h1>\n<p><a href=\"https://openspeedtest.com/\">SpeedTest</a> by OpenSpeedTest\u2122 is a Free and Open-Source HTML5 Network Speed Test Software.</p>",
             "categories": [
-                "network"
+                "networking"
             ],
             "description": "Free & Open-Source HTML5 Network Performance Estimation Tool.",
             "healthy": true,
             "healthy_error": null,
             "home": "https://openspeedtest.com/",
             "location": "/workspace/community/openspeedtest",
-            "latest_version": "1.0.0",
+            "latest_version": "1.0.1",
             "latest_app_version": "v2.0.5",
-            "latest_human_version": "v2.0.5_1.0.0",
-            "last_update": "2024-07-24 05:40:18",
+            "latest_human_version": "v2.0.5_1.0.1",
+            "last_update": "2024-07-24 06:06:06",
             "name": "openspeedtest",
             "recommended": false,
             "title": "OpenSpeedTest",
@@ -26,8 +26,13 @@
                     "email": "dev@ixsystems.com"
                 }
             ],
-            "tags": [],
-            "screenshots": [],
+            "tags": [
+                "speed",
+                "test"
+            ],
+            "screenshots": [
+                "https://open.cachefly.net/assets/images/dash-ss.jpg"
+            ],
             "sources": [
                 "https://openspeedtest.com",
                 "https://github.com/chencaidy/truenas_charts/tree/master/community/openspeedtest",
