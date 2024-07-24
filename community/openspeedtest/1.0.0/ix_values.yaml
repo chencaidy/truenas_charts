@@ -1,0 +1,20 @@
+image:
+  repository: openspeedtest/latest
+  pullPolicy: IfNotPresent
+  tag: v2.0.5
+
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+
+ostConfig:
+  additionalEnvs: []
+
+ostNetwork:
+  webPort: 10256
+  hostNetwork: false
+
+ostRunAs:
+  user: 568
+  group: 568

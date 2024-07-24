@@ -1,0 +1,25 @@
+name: openspeedtest
+description: Free & Open-Source HTML5 Network Performance Estimation Tool.
+annotations:
+  title: OpenSpeedTest
+type: application
+version: 1.0.0
+apiVersion: v2
+appVersion: v2.0.5
+kubeVersion: '>=1.16.0-0'
+maintainers:
+  - name: truenas
+    url: https://www.truenas.com/
+    email: dev@ixsystems.com
+dependencies:
+  - name: common
+    repository: file://../../../common
+    version: 1.2.9
+home: https://openspeedtest.com/
+icon: https://raw.githubusercontent.com/openspeedtest/Speed-Test/main/assets/images/icons/android-chrome-192x192.png
+sources:
+  - https://openspeedtest.com
+  - https://github.com/chencaidy/truenas_charts/tree/master/community/openspeedtest
+  - https://hub.docker.com/r/openspeedtest/latest
+keywords:
+  - network

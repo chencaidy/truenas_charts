@@ -1,0 +1,8 @@
+icon_url: https://raw.githubusercontent.com/openspeedtest/Speed-Test/main/assets/images/icons/android-chrome-192x192.png
+categories:
+  - networking
+screenshots:
+  - https://open.cachefly.net/assets/images/dash-ss.jpg
+tags:
+  - speed
+  - test
