@@ -6,6 +6,8 @@ workload:
     type: Deployment
     podSpec:
       hostNetwork: {{ .Values.abNetwork.hostNetwork }}
+      securityContext:
+        fsGroup: {{ .Values.abID.group }}
       containers:
         autobangumi:
           enabled: true
@@ -23,7 +25,6 @@ workload:
                 - SETUID
           fixedEnv:
             PUID: {{ .Values.abID.user }}
-            PGID: {{ .Values.abID.group }}
           {{ with .Values.abConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}
@@ -59,7 +60,7 @@ service:
       webui:
         enabled: true
         primary: true
-        port: {{ .Values.abNetwork.webPort }}
+        port: 7892
         nodePort: {{ .Values.abNetwork.webPort }}
         targetPort: 7892
         targetSelector: autobangumi

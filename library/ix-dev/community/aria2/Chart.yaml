@@ -3,7 +3,7 @@ description: Lightweight multi-protocol & multi-source, cross platform download 
 annotations:
   title: Aria2
 type: application
-version: 1.0.1
+version: 1.0.2
 apiVersion: v2
 appVersion: 1.37.0
 kubeVersion: '>=1.16.0-0'

@@ -14,7 +14,6 @@ workload:
           securityContext:
             runAsUser: 101
             runAsGroup: 101
-            readOnlyRootFilesystem: false
           {{ with .Values.ostConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}
@@ -47,10 +46,10 @@ service:
     type: NodePort
     targetSelector: openspeedtest
     ports:
-      openspeedtest:
+      webui:
         enabled: true
         primary: true
-        port: {{ .Values.ostNetwork.webPort }}
+        port: 3000
         nodePort: {{ .Values.ostNetwork.webPort }}
         targetPort: 3000
         targetSelector: openspeedtest

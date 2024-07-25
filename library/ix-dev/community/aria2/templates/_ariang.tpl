@@ -34,14 +34,13 @@ workload:
 service:
   ariang:
     enabled: true
-    primary: true
     type: NodePort
     targetSelector: ariang
     ports:
       webui:
         enabled: true
         primary: true
-        port: {{ .Values.ariaNetwork.webPort }}
+        port: 6880
         nodePort: {{ .Values.ariaNetwork.webPort }}
         targetPort: 6880
         targetSelector: ariang

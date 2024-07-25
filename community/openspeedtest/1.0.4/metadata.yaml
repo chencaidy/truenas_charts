@@ -3,6 +3,6 @@ runAsContext:
     groupName: nginx
     gid: 101
     uid: 101
-    description: OpenSpeedTest requires root privileges to start the nginx process.
+    description: OpenSpeedTest runs as non-root user.
 capabilities: []
 hostMounts: []

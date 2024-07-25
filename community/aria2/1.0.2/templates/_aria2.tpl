@@ -6,6 +6,8 @@ workload:
     type: Deployment
     podSpec:
       hostNetwork: {{ .Values.ariaNetwork.hostNetwork }}
+      securityContext:
+        fsGroup: {{ .Values.ariaID.group }}
       containers:
         aria2:
           enabled: true
@@ -29,7 +31,6 @@ workload:
             RPC_SECRET: {{ .Values.ariaConfig.rpcSecret }}
           fixedEnv:
             PUID: {{ .Values.ariaID.user }}
-            PGID: {{ .Values.ariaID.group }}
           {{ with .Values.ariaConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}
@@ -55,18 +56,19 @@ workload:
 service:
   aria2:
     enabled: true
+    primary: true
     type: NodePort
     targetSelector: aria2
     ports:
       rpc:
         enabled: true
-        port: {{ .Values.ariaNetwork.rpcPort }}
+        port: 6800
         nodePort: {{ .Values.ariaNetwork.rpcPort }}
         targetPort: 6800
         targetSelector: aria2
       listen:
         enabled: true
-        port: {{ .Values.ariaNetwork.listenPort }}
+        port: 6888
         nodePort: {{ .Values.ariaNetwork.listenPort }}
         targetPort: 6888
         targetSelector: aria2
