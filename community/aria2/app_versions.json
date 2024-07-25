@@ -1,17 +1,17 @@
 {
-    "1.0.1": {
+    "1.0.2": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/workspace/community/aria2/1.0.1",
-        "last_update": "2024-07-24 17:01:23",
+        "location": "/workspace/community/aria2/1.0.2",
+        "last_update": "2024-07-25 17:08:41",
         "required_features": [
-            "normalize/ixVolume",
             "definitions/timezone",
-            "normalize/acl"
+            "normalize/acl",
+            "normalize/ixVolume"
         ],
-        "human_version": "1.37.0_1.0.1",
-        "version": "1.0.1",
+        "human_version": "1.37.0_1.0.2",
+        "version": "1.0.2",
         "chart_metadata": {
             "name": "aria2",
             "description": "Lightweight multi-protocol & multi-source, cross platform download utility .",
@@ -19,7 +19,7 @@
                 "title": "Aria2"
             },
             "type": "application",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "apiVersion": "v2",
             "appVersion": "1.37.0",
             "kubeVersion": ">=1.16.0-0",

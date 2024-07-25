@@ -1,13 +1,13 @@
 {
-    "1.0.3": {
+    "1.0.4": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/workspace/community/openspeedtest/1.0.3",
-        "last_update": "2024-07-24 15:10:45",
+        "location": "/workspace/community/openspeedtest/1.0.4",
+        "last_update": "2024-07-25 17:08:41",
         "required_features": [],
-        "human_version": "v2.0.5_1.0.3",
-        "version": "1.0.3",
+        "human_version": "v2.0.5_1.0.4",
+        "version": "1.0.4",
         "chart_metadata": {
             "name": "openspeedtest",
             "description": "Free & Open-Source HTML5 Network Performance Estimation Tool.",
@@ -15,7 +15,7 @@
                 "title": "OpenSpeedTest"
             },
             "type": "application",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "apiVersion": "v2",
             "appVersion": "v2.0.5",
             "kubeVersion": ">=1.16.0-0",
@@ -51,7 +51,7 @@
                     "groupName": "nginx",
                     "gid": 101,
                     "uid": 101,
-                    "description": "OpenSpeedTest requires root privileges to start the nginx process."
+                    "description": "OpenSpeedTest runs as non-root user."
                 }
             ],
             "capabilities": [],
