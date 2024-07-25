@@ -62,6 +62,7 @@ service:
     ports:
       rpc:
         enabled: true
+        primary: true
         port: 6800
         nodePort: {{ .Values.ariaNetwork.rpcPort }}
         targetPort: 6800

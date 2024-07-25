@@ -3,7 +3,7 @@ description: Free & Open-Source HTML5 Network Performance Estimation Tool.
 annotations:
   title: OpenSpeedTest
 type: application
-version: 1.0.4
+version: 1.0.5
 apiVersion: v2
 appVersion: v2.0.5
 kubeVersion: '>=1.16.0-0'

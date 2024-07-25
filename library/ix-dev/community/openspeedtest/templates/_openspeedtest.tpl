@@ -14,6 +14,7 @@ workload:
           securityContext:
             runAsUser: 101
             runAsGroup: 101
+            readOnlyRootFilesystem: false
           {{ with .Values.ostConfig.additionalEnvs }}
           envList:
             {{ range $env := . }}
