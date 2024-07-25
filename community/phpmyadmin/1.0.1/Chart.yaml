@@ -1,0 +1,25 @@
+name: phpmyadmin
+description: A web interface for MySQL and MariaDB.
+annotations:
+  title: phpMyAdmin
+type: application
+version: 1.0.1
+apiVersion: v2
+appVersion: 5.2.1
+kubeVersion: '>=1.16.0-0'
+maintainers:
+  - name: Caidy
+    url: https://github.com/chencaidy
+    email: chen@caidy.cc
+dependencies:
+  - name: common
+    repository: file://../../../common
+    version: 1.2.9
+home: https://www.phpmyadmin.net/
+icon: https://truecharts.org/img/hotlink-ok/chart-icons/phpmyadmin.webp
+sources:
+  - https://hub.docker.com/_/phpmyadmin
+  - https://github.com/phpmyadmin/phpmyadmin
+keywords:
+  - database
+  - utils

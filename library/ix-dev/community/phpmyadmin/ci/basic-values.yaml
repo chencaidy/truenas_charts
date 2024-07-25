@@ -1,0 +1,6 @@
+pmaNetwork:
+  webPort: 33307
+
+pmaID:
+  user: 1000
+  group: 1000

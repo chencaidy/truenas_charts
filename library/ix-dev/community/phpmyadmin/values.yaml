@@ -1,0 +1,19 @@
+image:
+  repository: phpmyadmin
+  pullPolicy: IfNotPresent
+  tag: 5.2.1
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+pmaConfig:
+  additionalEnvs: []
+
+pmaNetwork:
+  webPort: 33307
+
+pmaID:
+  user: 568
+  group: 568

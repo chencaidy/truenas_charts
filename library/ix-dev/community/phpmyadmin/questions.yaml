@@ -1,0 +1,149 @@
+groups:
+  - name: phpMyAdmin Configuration
+    description: Configure phpMyAdmin
+  - name: User and Group Configuration
+    description: Configure User and Group for phpMyAdmin
+  - name: Network Configuration
+    description: Configure Network for phpMyAdmin
+  - name: Resources Configuration
+    description: Configure Resources for phpMyAdmin
+
+portals:
+  web_portal:
+    protocols:
+      - "$kubernetes-resource_configmap_portal_protocol"
+    host:
+      - "$kubernetes-resource_configmap_portal_host"
+    ports:
+      - "$kubernetes-resource_configmap_portal_port"
+    path: "$kubernetes-resource_configmap_portal_path"
+
+questions:
+  - variable: TZ
+    group: phpMyAdmin Configuration
+    label: Timezone
+    schema:
+      type: string
+      default: Etc/UTC
+      required: true
+      $ref:
+        - definitions/timezone
+
+  - variable: pmaConfig
+    label: ""
+    group: phpMyAdmin Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: dbHost
+          label: PMA_HOST
+          description: Define address/host name of the MySQL server.
+          schema:
+            type: string
+        - variable: dbPort
+          label: PMA_PORT
+          description: Define port of the MySQL server.
+          schema:
+            type: string
+        - variable: additionalEnvs
+          label: Additional Environment Variables
+          description: Configure additional environment variables for phpMyAdmin.
+          schema:
+            type: list
+            default: []
+            items:
+              - variable: env
+                label: Environment Variable
+                schema:
+                  type: dict
+                  attrs:
+                    - variable: name
+                      label: Name
+                      schema:
+                        type: string
+                        required: true
+                    - variable: value
+                      label: Value
+                      schema:
+                        type: string
+                        required: true
+
+  - variable: pmaID
+    label: ""
+    group: User and Group Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: user
+          label: User ID
+          description: The user id that phpMyAdmin will run as.
+          schema:
+            type: int
+            min: 2
+            default: 568
+            required: true
+        - variable: group
+          label: Group ID
+          description: The group id that phpMyAdmin will run as.
+          schema:
+            type: int
+            min: 2
+            default: 568
+            required: true
+
+  - variable: pmaNetwork
+    label: ""
+    group: Network Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: webPort
+          label: Web Port
+          description: The port for the phpMyAdmin Web UI.
+          schema:
+            type: int
+            default: 33307
+            min: 9000
+            max: 65535
+            required: true
+
+  - variable: resources
+    label: Resources Configuration
+    group: Resources Configuration
+    schema:
+      type: dict
+      attrs:
+        - variable: limits
+          label: Limits
+          schema:
+            type: dict
+            attrs:
+              - variable: cpu
+                label: CPU
+                description: CPU limit for phpMyAdmin.
+                schema:
+                  type: string
+                  max_length: 6
+                  valid_chars: '^(0\.[1-9]|[1-9][0-9]*)(\.[0-9]|m?)$'
+                  valid_chars_error: |
+                    Valid CPU limit formats are</br>
+                    - Plain Integer - eg. 1</br>
+                    - Float - eg. 0.5</br>
+                    - Milicpu - eg. 500m
+                  default: "4000m"
+                  required: true
+              - variable: memory
+                label: Memory
+                description: Memory limit for phpMyAdmin.
+                schema:
+                  type: string
+                  max_length: 12
+                  valid_chars: '^[1-9][0-9]*([EPTGMK]i?|e[0-9]+)?$'
+                  valid_chars_error: |
+                    Valid Memory limit formats are</br>
+                    - Suffixed with E/P/T/G/M/K - eg. 1G</br>
+                    - Suffixed with Ei/Pi/Ti/Gi/Mi/Ki - eg. 1Gi</br>
+                    - Plain Integer in bytes - eg. 1024</br>
+                    - Exponent - eg. 134e6
+                  default: "8Gi"
+                  required: true
