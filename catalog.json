@@ -15,7 +15,7 @@
             "latest_version": "1.0.5",
             "latest_app_version": "3.1.14",
             "latest_human_version": "3.1.14_1.0.5",
-            "last_update": "2024-07-25 17:09:00",
+            "last_update": "2024-07-25 17:17:44",
             "name": "autobangumi",
             "recommended": false,
             "title": "AutoBangumi",
@@ -52,7 +52,7 @@
             "latest_version": "1.0.5",
             "latest_app_version": "v2.0.5",
             "latest_human_version": "v2.0.5_1.0.5",
-            "last_update": "2024-07-25 17:17:33",
+            "last_update": "2024-07-25 17:17:44",
             "name": "openspeedtest",
             "recommended": false,
             "title": "OpenSpeedTest",
@@ -76,6 +76,40 @@
                 "https://hub.docker.com/r/openspeedtest/latest"
             ],
             "icon_url": "https://raw.githubusercontent.com/openspeedtest/Speed-Test/main/assets/images/icons/android-chrome-192x192.png"
+        },
+        "phpmyadmin": {
+            "app_readme": "<h1>phpMyAdmin</h1>\n<p><a href=\"https://www.phpmyadmin.net/\">phpMyAdmin</a> - A web interface for MySQL and MariaDB.</p>",
+            "categories": [
+                "database"
+            ],
+            "description": "A web interface for MySQL and MariaDB.",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://www.phpmyadmin.net/",
+            "location": "/workspace/community/phpmyadmin",
+            "latest_version": "1.0.1",
+            "latest_app_version": "5.2.1",
+            "latest_human_version": "5.2.1_1.0.1",
+            "last_update": "2024-07-25 17:56:02",
+            "name": "phpmyadmin",
+            "recommended": false,
+            "title": "phpMyAdmin",
+            "maintainers": [
+                {
+                    "name": "Caidy",
+                    "url": "https://github.com/chencaidy",
+                    "email": "chen@caidy.cc"
+                }
+            ],
+            "tags": [
+                "utils"
+            ],
+            "screenshots": [],
+            "sources": [
+                "https://hub.docker.com/_/phpmyadmin",
+                "https://github.com/phpmyadmin/phpmyadmin"
+            ],
+            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/phpmyadmin.webp"
         },
         "nginx-proxy-manager": {
             "app_readme": "<h1>Nginx Proxy Manager</h1>\n<p><a href=\"https://nginxproxymanager.com\">Nginx Proxy Manager</a> Expose your services easily and securely</p>\n<blockquote>\n<p>Application requires to run as root. This is a limitation of the application.</p>\n</blockquote>",
@@ -130,7 +164,7 @@
             "latest_version": "1.0.3",
             "latest_app_version": "1.37.0",
             "latest_human_version": "1.37.0_1.0.3",
-            "last_update": "2024-07-25 17:17:33",
+            "last_update": "2024-07-25 17:17:44",
             "name": "aria2",
             "recommended": false,
             "title": "Aria2",
