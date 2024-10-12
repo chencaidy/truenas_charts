@@ -1,17 +1,17 @@
 {
-    "1.0.5": {
+    "1.0.6": {
         "healthy": true,
         "supported": false,
         "healthy_error": null,
-        "location": "/workspace/community/autobangumi/1.0.5",
-        "last_update": "2024-07-25 17:08:41",
+        "location": "/workspace/community/autobangumi/1.0.6",
+        "last_update": "2024-10-12 12:24:42",
         "required_features": [
-            "normalize/acl",
             "definitions/timezone",
-            "normalize/ixVolume"
+            "normalize/ixVolume",
+            "normalize/acl"
         ],
-        "human_version": "3.1.14_1.0.5",
-        "version": "1.0.5",
+        "human_version": "3.1.18_1.0.6",
+        "version": "1.0.6",
         "chart_metadata": {
             "name": "autobangumi",
             "description": "\u5168\u81ea\u52a8\u8ffd\u756a\u5de5\u5177",
@@ -19,9 +19,9 @@
                 "title": "AutoBangumi"
             },
             "type": "application",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "apiVersion": "v2",
-            "appVersion": "3.1.14",
+            "appVersion": "3.1.18",
             "kubeVersion": ">=1.16.0-0",
             "maintainers": [
                 {
